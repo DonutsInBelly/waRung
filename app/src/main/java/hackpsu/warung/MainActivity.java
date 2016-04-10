@@ -51,8 +51,7 @@ import com.interaxon.libmuse.MuseVersion;
 public class MainActivity extends AppCompatActivity {
 
     private static Button nextBtn1;
-    private static CheckBox RUPregs;
-    private static CheckBox under18;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,29 +97,6 @@ public class MainActivity extends AppCompatActivity {
         graphNotificationManager.notify(0, noteBuilder.build());
     }
 
-    int caffeineThreshhold = 4;
-
-    public void onCheckBoxClicked(View view){
-        boolean checked = ((CheckBox) view).isChecked();
-        RUPregs = (CheckBox) findViewById(R.id.pregBox);
-        RUPregs.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(((CheckBox) view).isChecked()){
-                    caffeineThreshhold = 2;
-                }
-            }
-        });
-        under18 = (CheckBox) findViewById(R.id.ageBox);
-        under18.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(((CheckBox) view).isChecked()){
-                    caffeineThreshhold = 2;
-                }
-            }
-        });
-    }
 
     public void onClickButtonListener(){
         nextBtn1 = (Button)findViewById(R.id.nextBtn1);
