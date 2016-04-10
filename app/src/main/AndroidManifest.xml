@@ -15,6 +15,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".plot" >
+
+        </activity>
+        <activity android:name=".UserQuestions" />
+        <intent-filter>
+            <action android:name="hackpsu.warung.UserQuestions" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        <activity android:name=".NumberOfCups" />
+        <intent-filter>
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        <activity android:name=".TimeCount"></activity>
+        <action android:name="hackpsu.warung.NumberOfCups" />
     </application>
 
 </manifest>
